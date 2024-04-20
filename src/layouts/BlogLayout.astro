@@ -1,32 +1,21 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 import '../styles/style.css'
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
+<BaseLayout pageTitle = { `blog | ${frontmatter.title}` }>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{`thelocalgodd | ${frontmatter.title}`}</title>
-		<ViewTransitions />
-	</head>
-	<body>
-		<Header />
-
-		<li class="list-none border border-solid border-l-slate-800 my-2 flex flex-col justify-between bg-zinc-300 px-3 w-[350px] mx-auto">
-			<p>{frontmatter.title}</p>
-			<p class="flex justify-end text-zinc-500">{frontmatter.author}</p>
+		<li class="list-none border border-solid border-l-slate-800 mb-5 flex flex-col justify-between bg-zinc-300 px-3 w-[350px] md:w-auto md:m-5 mx-auto">
+			<p>
+				{frontmatter.title}
+			</p>
+			<p class="flex justify-end text-zinc-500">
+				{frontmatter.author}
+			</p>
 		</li>
-
-		<article class="w-[350px] mx-auto">
+		<article class="w-[350px] md:w-auto md:mx-5 mx-auto">
 			<slot />
 		</article>
 		<br>
-		<Footer />
 	</body>
 </html>

@@ -5,7 +5,7 @@ const {title, description, link} = Astro.props;
 
 
 <a href={link}>
-    <div id="project" class="border border-solid border-zinc-600 hover:bg-zinc-300 hover:border-zinc-300 p-5 w-[250px] my-2 mx-2 rounded-xl">
+    <div id="project" class="border border-solid border-zinc-600 hover:bg-zinc-300 hover:border-zinc-300 p-5 w-[250px] my-2 mx-2 rounded-xl flex flex-col">
         <p class="text-zinc-600 mb-2">{title}</p>
         <p class="">{description}</p>
     </div>

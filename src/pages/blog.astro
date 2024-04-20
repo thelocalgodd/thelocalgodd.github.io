@@ -1,29 +1,15 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const postCount = allPosts.length;
 import "../styles/style.css";
-import { ViewTransitions } from "astro:transitions";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>tlg | blog</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <Header />
-
+<BaseLayout pageTitle = "tlg | blog">
     <section id="blog flex items-center">
       <div
-        id="blog-post-count"
-        class="px-5 py-1 mx-auto mb-10 border border-solid border-zinc-600 w-fit my-2 rounded-full"
+        id="blog-post-count" 
+        class="px-5 py-1 mx-auto md:mx-0 mb-10 border border-solid border-zinc-600 w-fit my-2 rounded-full"
       >
         <p id="blogPostCount">blog posts: {postCount}</p>
       </div>
@@ -40,7 +26,4 @@ import { ViewTransitions } from "astro:transitions";
         }
       </ul>
     </section>
-
-    <Footer />
-  </body>
-</html>
+</BaseLayout>

@@ -16,6 +16,6 @@ body {
     color: grey;
 }
 
-img:hover {
+img {
     filter: grayscale(100%);
 }
