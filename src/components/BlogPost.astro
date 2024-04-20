@@ -1,0 +1,10 @@
+---
+const {title, date, post} = Astro.props;
+---
+
+<a href=`/posts/${post}`>
+    <li class="list-none border border-solid border-l-slate-800 my-2 flex justify-between bg-zinc-300 px-3">
+        <p>{title}</p>
+        <p>{date}</p>
+    </li>
+</a>

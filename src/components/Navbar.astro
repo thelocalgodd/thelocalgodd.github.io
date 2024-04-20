@@ -1,0 +1,27 @@
+---
+import '../styles/style.css'
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<ul class="my-5 flex justify-between w-28 text-xl">
+    <li>
+        <a 
+            href="/" 
+            class="hover:text-zinc-500"
+            id={currentPath === "" ? "active" : ""}
+        >
+            home
+        </a>
+    </li>
+    <li>
+        <a 
+            href="/blog" 
+            class="hover:text-zinc-500"
+            id={currentPath === "blog" ? "active" : ""}
+        >
+            blog
+        </a>
+    </li>
+</ul>
