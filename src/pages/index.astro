@@ -12,14 +12,14 @@ import { ViewTransitions } from 'astro:transitions'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title class="border outline outline-2">Astro</title>
+		<title>tlg | hey there</title>
 		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
 
-		<section id="welcome" class="flex items-center md:flex md:flex-col-reverse">
-			<div id="left" class="border-solid border border-zinc-600 p-5 my-10 mr-20 rounded-xl">
+		<section id="welcome" class="flex flex-col-reverse md:flex-row justify-center mx-auto items-center">
+			<div id="left" class="border-solid border border-zinc-600 p-5 my-10 rounded-xl md:mr-16">
 				<p class="text-zinc-600">Welcome, </p>
 				<br>
 				<p>
@@ -42,7 +42,7 @@ import { ViewTransitions } from 'astro:transitions'
 			</div>
 		</section>
 
-		<section id="tools" class="border border-solid border-zinc-600 p-5 rounded-xl my-5">
+		<section id="tools" class="border border-solid border-zinc-600 p-5 rounded-xl my-5 mx-auto w-[380px] md:w-3/5">
 			<p class="text-zinc-600">Tools / Technologies Used</p>
 			<br>
 			<p>
@@ -50,9 +50,9 @@ import { ViewTransitions } from 'astro:transitions'
 			</p>
 		</section>
 
-		<section id="featured-projects" class="border border-solid border-zinc-600 p-5 rounded-xl my-5 flex flex-col">
-			<p class="text-zinc-600">featured</p>
-			<div class="flex">
+		<section id="featured-projects" class="border border-solid p-5 rounded-xl my-5 flex flex-col">
+			<p class="text-zinc-600 flex justify-center md:justify-start">featured</p>
+			<div class="flex flex-col md:flex-row">
 				<ProjectCard
 					title = "thelocalgodd.me 2.0"
 					description = "I am redesigning and rebuilding my personal portfolio site from scratch, taking inspo from other sites i have seen."
@@ -70,9 +70,8 @@ import { ViewTransitions } from 'astro:transitions'
 				/>
 			</div>
 
-			<p class="my-1">check out more projects <a href="https://github.com/thelocalgodd"><u class="underline-offset-4 hover:text-zinc-600">here</u></a></p>
+			<p class="my-1 flex justify-center mt-5">🔗 | check out more projects<a href="https://github.com/thelocalgodd"><u class="underline-offset-4 hover:text-zinc-600 ml-1">here</u></a></p>
 		</section>
-
 		<Footer />
 	</body>
 </html>
