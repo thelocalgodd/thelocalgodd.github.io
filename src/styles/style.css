@@ -8,9 +8,7 @@
 }
 
 body {
-    width: 900px;
     margin: auto;
-
     background-color: #ebebeb;
 }
 
@@ -18,6 +16,6 @@ body {
     color: grey;
 }
 
-img:hover {
+img {
     filter: grayscale(100%);
 }
