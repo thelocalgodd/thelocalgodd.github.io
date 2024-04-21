@@ -3,8 +3,14 @@ import '../styles/style.css'
 import Navbar from './Navbar.astro'
 ---
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVC1DZR2P8"></script>
-<script src="../scripts/analytics.js"></script>
+<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-SVC1DZR2P8"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVC1DZR2P8');
+</script>
 
 <div id="container" class="flex flex-col md:flex-row md:justify-between my-5 items-center justify-between text-xl">
     <p class="text-xl mb-5">
