@@ -7,11 +7,11 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle = { `blog | ${frontmatter.title}` }>
 
-		<li class="list-none border border-solid border-l-slate-800 mb-5 flex flex-col justify-between bg-zinc-300 px-3 w-[350px] md:w-auto md:m-5 mx-auto">
-			<p>
+		<li class="list-none border border-dashed mb-5 flex items-center justify-between rounded-md px-3 w-[350px] md:w-auto md:m-5 mx-auto">
+			<p class="bg-zinc-300 border border-dashed border-slate-800 px-3 rounded-lg">
 				{frontmatter.title}
 			</p>
-			<p class="flex justify-end text-zinc-500">
+			<p class="text-zinc-500">
 				{frontmatter.author}
 			</p>
 		</li>

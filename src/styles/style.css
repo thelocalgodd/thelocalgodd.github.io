@@ -11,7 +11,7 @@ body {
     background-color: #ebebeb;
 }
 
-#active {
+li #active {
     color: grey;
 }
 

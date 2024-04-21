@@ -1,5 +1,6 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro'
+import Tag from '../components/Tag.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "tlg | hello world"
 ---
@@ -19,6 +20,8 @@ const pageTitle = "tlg | hello world"
 					<br>
 					the basics of Cybersecurity
 				</p>
+
+					<Tag name="cool dude"/>
 			</div>
 			<div id="right" class="flex flex-col mb-4 mt-4">
 				<img src="/vkkpemlie.jpg" alt="" width="150px" class="border-solid border border-zinc-600 rounded-xl hover:border-0">
@@ -32,7 +35,7 @@ const pageTitle = "tlg | hello world"
 			<p class="text-zinc-600">Tools / Technologies Used</p>
 			<br>
 			<p>
-				HTML, CSS, Sass, TailwindCSS, Javascript, ReactJS, Astro, NodeJS, Bash, Python, Java, C++, Git, Github, Photoshop, Figma,
+				HTML, CSS, Sass, TailwindCSS, Javascript, ReactJS, Astro, NodeJS, Bash, Python, Java, C++, Git, Github, Photoshop, Figma
 			</p>
 		</section>
 
@@ -43,16 +46,19 @@ const pageTitle = "tlg | hello world"
 					title = "tailwind-auto-script"
 					description = "this is a basic bash script I wrote to automate the process of creating a new vite + react project and adding tailwind automatically."
 					link = 'https://github.com/thelocalgodd/tailwind-auto-script'
+					tag = "bash"
 				/>
 				<ProjectCard
 					title = "thelocalgodd.me 2.0"
 					description = "I am redesigning and rebuilding my personal portfolio site from scratch, taking inspo from other sites i have seen."
 					link = 'https://github.com/thelocalgodd/test.thelocalgodd.github.io'
+					tag = "astro, tailwindcss"
 				/>
 				<ProjectCard 
 					title = "KNUST CS Assignments"
 					description = "as the title suggests, this is a repo filled with README files and relevant files regarding coding assignments given at KNUST "
 					link = "https://github.com/thelocalgodd/csknust"
+					tag = "c++. java, sql"
 				/>
 			</div>
 
