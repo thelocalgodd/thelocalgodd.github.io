@@ -5,25 +5,26 @@ const postCount = allPosts.length;
 import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout pageTitle = "tlg | blog">
-    <section id="blog flex items-center">
-      <div
-        id="blog-post-count" 
-        class="px-5 py-1 mx-auto md:mx-0 mb-10 border border-solid border-zinc-600 w-fit my-2 rounded-full"
-      >
-        <p id="blogPostCount">blog posts: {postCount}</p>
-      </div>
 
-      <ul>
-        {
-          allPosts.map((post) => (
-            <BlogPost 
-              title = {post.frontmatter.title}
-              date = {post.frontmatter.pubDate}
-              post = {post.url}
-			      />
-          ))
-        }
-      </ul>
-    </section>
+<BaseLayout pageTitle="tlg | blog">
+  <section id="blog flex items-center">
+    <div
+      id="blog-post-count"
+      class="px-5 py-1 mx-auto md:mx-0 mb-10 border border-solid border-zinc-600 w-fit my-2 rounded-full"
+    >
+      <p id="blogPostCount">blog posts: {postCount}</p>
+    </div>
+
+    <ul>
+      {
+        allPosts.map((post) => (
+          <BlogPost
+            title={post.frontmatter.title}
+            date={post.frontmatter.pubDate}
+            post={post.url}
+          />
+        ))
+      }
+    </ul>
+  </section>
 </BaseLayout>

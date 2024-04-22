@@ -2,11 +2,9 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-const { pageTitle } = Astro.props;
-
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/placeholder-social.jpg'} = Astro.props;
+const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,23 +15,35 @@ const { title, description, image = '/placeholder-social.jpg'} = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <!-- Analytics -->
-	  <script defer src="https://analytics.us.umami.is/script.js" data-website-id="f2eb0fb3-2348-4483-89a8-56906584f090"></script>
+    <script
+      defer
+      src="https://analytics.us.umami.is/script.js"
+      data-website-id="f2eb0fb3-2348-4483-89a8-56906584f090"></script>
 
     <!-- Primary Meta Tags -->
-    <meta name="description" content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi." />
+    <meta
+      name="description"
+      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://test.thelocalgodd.me/" />
     <meta property="og:title" content="VINCENT KWAKU KPEMLIE | tlg" />
-    <meta property="og:description" content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi." />
+    <meta
+      property="og:description"
+      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
+    />
     <meta property="og:image" content="/placeholder" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://test.thelocalgodd.me/" />
     <meta property="twitter:title" content="tlg | hello world" />
-    <meta property="twitter:description" content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi." />
+    <meta
+      property="twitter:description"
+      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
+    />
     <meta property="twitter:image" content="/placeholder" />
 
     <link rel="canonical" href={canonicalURL} />
@@ -41,7 +51,7 @@ const { title, description, image = '/placeholder-social.jpg'} = Astro.props;
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/prism" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
 
     <title>{pageTitle}</title>
     <ViewTransitions />

@@ -1,23 +1,25 @@
 ---
 const date = new Date();
-const year = date.getFullYear()
+const year = date.getFullYear();
 ---
 
-<hr class="mx-auto border-solid border border-zinc-400 mb-4">
+<hr class="mx-auto border-solid border border-zinc-400 mb-4" />
 
-<footer class="flex justify-between w-[350px] md:w-auto md:px-10 mx-auto mb-2 px-3 text-sm">
-    <div id="left" class="">
-        <p>&copy; {year} | thelocalgodd</p>
-        <p class="text-zinc-500 ">astro | tailwind | github pages</p>
-    </div>
-    <div id="right" class="text-right">
-        [ tlg ]
-        <p id="heading">
-            <a href="https://github.com/thelocalgodd">
-                <u class="underline-offset-4">
-                    <p class="hover:text-zinc-600">source code</p>
-                </u>
-            </a>
-        </p>
-    </div>
+<footer
+  class="flex justify-between w-[350px] md:w-auto md:px-10 mx-auto mb-2 px-3 text-sm"
+>
+  <div id="left" class="">
+    <p>&copy; {year} | thelocalgodd</p>
+    <p class="text-zinc-500">astro | tailwind | github pages</p>
+  </div>
+  <div id="right" aria-label="footer, right side" class="text-right">
+    [ tlg ]
+    <p id="heading" aria-label="source code link">
+      <a aria-label="source code link" href="https://github.com/thelocalgodd">
+        <u class="underline-offset-4">
+          <p class="hover:text-zinc-600">source code</p>
+        </u>
+      </a>
+    </p>
+  </div>
 </footer>
