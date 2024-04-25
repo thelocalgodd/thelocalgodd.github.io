@@ -2,6 +2,8 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import Loader from "../components/Loader.astro";
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
@@ -47,16 +49,14 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     <meta property="twitter:image" content="/placeholder" />
 
     <link rel="canonical" href={canonicalURL} />
-    <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/prism" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
 
     <title>{pageTitle}</title>
     <ViewTransitions />
+    <Loader />
   </head>
-  <body class="md:w-[900px] *:select-none">
+  <body class="md:w-[850px] *:select-none">
     <Header />
     <slot />
     <Footer />

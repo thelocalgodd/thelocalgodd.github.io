@@ -3,8 +3,8 @@ const {title, date, post} = Astro.props;
 ---
 
 <a href=`${post}`>
-    <li class="list-none border-2 border-solid border-l-slate-800 my-2 flex justify-between bg-zinc-300 hover:bg-zinc-400 px-3 w-[350px] mx-auto md:w-auto">
+    <li class="list-none border-2 border-solid border-l-slate-800 my-2 flex justify-between bg-zinc-300 hover:bg-zinc-400 px-3 w-[350px] mx-auto md:w-auto dark:bg-zinc-600">
         <p>{title}</p>
-        <p class="text-zinc-500">{date}</p>
+        <p class="text-zinc-500 dark:text-zinc-300">{date}</p>
     </li>
 </a>

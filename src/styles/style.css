@@ -12,9 +12,27 @@ body {
 }
 
 li #active {
-    color: grey;
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 img {
     filter: grayscale(100%);
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212121;
+        color: white;
+    }
+
+    img {
+        filter: grayscale(50%);
+    }
+
+    svg {
+        fill: rgb(182, 182, 182);
+    }
 }

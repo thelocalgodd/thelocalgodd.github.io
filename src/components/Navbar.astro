@@ -5,15 +5,15 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<ul class="flex items-center md:justify-start justify-center text-lg mb-4">
+<ul class="flex items-center md:justify-start justify-center text-lg">
   <li
-    class="border border-dashed border-zinc-300 bg-zinc-300 px-3 flex items-center justify-center rounded-3xl hover:border-zinc-600 mx-2"
+    class="flex items-center justify-center rounded-3xl"
   >
     <a href="/" class="mx-3" id={currentPath === "" ? "active" : ""}> home </a>
   </li>
 
   <li
-    class="border border-dashed border-zinc-600 hover:border-blue-300 px-3 flex items-center justify-center rounded-3xl mx-2"
+    class="flex items-center justify-center rounded-3xl"
   >
     <a href="/blog" class="mx-3" id={currentPath === "blog" ? "active" : ""}>
       blog

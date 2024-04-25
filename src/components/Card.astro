@@ -1,0 +1,9 @@
+---
+const { title, description, link } = Astro.props;
+---
+
+<article class="w-fit my-10 border border-solid border-zinc-700 rounded-xl p-4">
+    <h2 class="text-xl font-bold">{ title }</h2>
+    <p class="text-sm text-zinc-700">{ description }</p>
+    <a href={ link } class="text-sm text-zinc-600 dark:text-zinc-200 underline">visit</a>
+</article>
