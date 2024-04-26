@@ -5,5 +5,5 @@ const { title, description, link } = Astro.props;
 <article class="my-2 w-[250px] h-fit md:my-10 mx-auto md:mx-2 border border-solid border-zinc-700 rounded-xl p-4">
     <h2 class="text-xl font-bold">{ title }</h2>
     <p class="text-sm text-zinc-500 my-2">{ description }</p>
-    <a href={ link } class="text-sm border border-none bg-green-600 px-3 py-1 rounded-3xl text-zinc-950 dark:text-zinc-200 ">visit</a>
+    <a href={ link } target="_blank" class="text-sm border border-none bg-green-600 px-3 py-1 rounded-3xl text-zinc-200 dark:text-zinc-200 ">visit</a>
 </article>

@@ -7,8 +7,13 @@ import Navbar from "./Navbar.astro";
   id="container"
   class="flex flex-col md:h-10 md:flex-row md:items-start md:justify-between items-center justify-between text-xl mt-5 min-w-max"
 >
-  <p class="text-xl mb-5 md:mb-0">
-    <a href="/">[ tlg ]</a>
+  <p class="text-xl mb-5 md:mb-0 md:w-20">
+    <a href="/">
+      [ 
+      <span id="logo-header">
+        tlg
+      </span>
+      ]</a>
   </p>
 
   <Navbar />
@@ -17,7 +22,7 @@ import Navbar from "./Navbar.astro";
     class="flex items-center justify-center border border-solid border-zinc-600 p-1 rounded-2xl mt-5 md:mt-0"
   >
     <li class="mx-2">
-      <a aria-label="email address" href="mailto:splashvincentk@outlook.com">
+      <a aria-label="email address" href="mailto:splashvincentk@outlook.com" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
@@ -30,7 +35,7 @@ import Navbar from "./Navbar.astro";
       </a>
     </li>
     <li class="mx-2">
-      <a aria-label="x.com link" href="https://x.com/dzidula_1">
+      <a aria-label="x.com link" href="https://x.com/dzidula_1" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
@@ -43,7 +48,7 @@ import Navbar from "./Navbar.astro";
       </a>
     </li>
     <li class="mx-2">
-      <a aria-label="github.com link" href="https://github.com/thelocalgodd">
+      <a aria-label="github.com link" href="https://github.com/thelocalgodd" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
@@ -57,3 +62,14 @@ import Navbar from "./Navbar.astro";
     </li>
   </ul>
 </header>
+
+<script>
+import Typewriter from "typewriter-effect/dist/core";
+
+  new Typewriter('#logo-header', {
+    strings: ['tlg', '速度'],
+    autoStart: true,
+    loop: true,
+    cursor: ''
+  });
+</script>

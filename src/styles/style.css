@@ -13,7 +13,13 @@ body {
 
 li #active {
     color: black;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(0, 189, 0);
+
+    @media (prefers-color-scheme: dark) {
+        color: white;
+        border-bottom: 2px solid rgb(0, 189, 0);
+    }
+
 }
 
 img {
@@ -34,5 +40,9 @@ img {
 
     svg {
         fill: rgb(182, 182, 182);
+    }
+
+    svg:hover {
+        fill: rgb(233, 233, 233);
     }
 }

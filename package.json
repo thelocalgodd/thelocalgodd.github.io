@@ -21,7 +21,8 @@
     "react-dom": "^18.2.0",
     "react-fontawesome": "^1.7.1",
     "react-spotify-embed": "^2.0.4",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.7"
