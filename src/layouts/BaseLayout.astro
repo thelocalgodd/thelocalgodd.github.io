@@ -56,9 +56,13 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     <ViewTransitions />
     <Loader />
   </head>
-  <body class="md:w-[850px] *:select-none">
+  <body class="md:w-[800px] *:select-none">
     <Header />
-    <slot />
+    <div class="flex items-center">
+      <div>
+        <slot />
+      </div>
+    </div>
     <Footer />
   </body>
 </html>
