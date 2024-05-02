@@ -1,21 +1,24 @@
 ---
-import '../styles/style.css'
+import "../styles/style.css";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-
-<BaseLayout pageTitle = { `blog | ${frontmatter.title}` }>
-		<li class="list-none my-5 flex items-center flex-col md:flex-row justify-between rounded-md px-3 w-[350px] md:w-auto md:m-5 mx-auto md:mx-0">
-			<p class="bg-zinc-300 border border-dashed border-slate-900 px-5 rounded-xl dark:bg-zinc-600 dark:border-white">
-				{frontmatter.title}
-			</p>
-			<p class="text-zinc-500 my-2">
-				{frontmatter.pubDate}
-			</p>
-		</li>
-		<article class="w-[350px] md:w-auto md:mx-4 mx-auto">
-			<slot />
-		</article>
-		<br>
+<BaseLayout pageTitle={`blog | ${frontmatter.title}`}>
+  <li
+    class="list-none my-5 flex items-center flex-col justify-between rounded-md px-3 w-[400px] md:flex-row md:w-auto md:m-5 mx-auto md:mx-0"
+  >
+    <p
+      class="bg-zinc-300 border border-dashed border-slate-900 px-5 rounded-xl dark:bg-zinc-600 dark:border-white"
+    >
+      {frontmatter.title}
+    </p>
+    <p class="text-zinc-500 my-2">
+      {frontmatter.pubDate}
+    </p>
+  </li>
+  <article class="w-[350px] md:w-auto md:mx-4 mx-auto">
+    <slot />
+  </article>
+  <br />
 </BaseLayout>
