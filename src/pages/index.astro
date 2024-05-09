@@ -8,7 +8,7 @@ const pageTitle = "tlg | hello world";
 <BaseLayout pageTitle={pageTitle}>
   <section
     id="welcome"
-    class="flex flex-col-reverse md:flex-row justify-center mx-auto items-center"
+    class="flex flex-col-reverse md:flex-row items-center md:justify-center mx-4 md:mx-auto"
   >
     <div
       id="left"
@@ -50,7 +50,7 @@ const pageTitle = "tlg | hello world";
 
   <section
     id="tools"
-    class="border border-solid border-zinc-600 p-5 rounded-xl my-5 mx-auto w-[380px] md:w-auto md:mx-20"
+    class="border border-solid border-zinc-600 p-5 rounded-xl my-5 mx-auto w-[350px] md:w-auto md:mx-20"
   >
     <p class="text-zinc-600 dark:text-zinc-400">Tools / Technologies Used</p>
     <br />
@@ -60,10 +60,7 @@ const pageTitle = "tlg | hello world";
     </p>
   </section>
 
-  <section
-    id="featured-projects"
-    class="p-5 rounded-xl my-5 flex flex-col mx-auto"
-  >
+  <section id="featured-projects" class="p-5 rounded-xl my-5 mx-auto">
     <p class="text-zinc-600 dark:text-zinc-400 flex justify-center">featured</p>
     <div class="flex flex-col items-center justify-center md:flex-row">
       <ProjectCard
