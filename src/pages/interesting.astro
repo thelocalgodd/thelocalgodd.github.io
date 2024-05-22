@@ -3,42 +3,46 @@ import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 
-const names = "Rentry, Rentry/Piracy, Massgrave"
-const namesList = names.split(", ")
+const names = "Rentry, Rentry/Piracy, Massgrave";
+const namesList = names.split(", ");
 
-const descriptions = 
-`
+const descriptions = `
 A free site to quickly host text documents.+
 A repository of all the information you will ever need on piracy, all the sites, links, and resources.+
 Windows Activation tools and resources.
-`
-const descriptionsList = descriptions.split("+")
+`;
+const descriptionsList = descriptions.split("+");
 
-const links = "https://rentry.org, https://rentry.org/piracy, https://massgrave.dev"
+const links =
+  "https://rentry.org, https://rentry.org/piracy, https://massgrave.dev";
 const linksList = links.split(", ");
-
 ---
 
 <BaseLayout pageTitle="tlg | interesting stuff">
-  <section id="blog flex items-center">
-    <div class="w-[310px] my-10 mx-auto md:mx-0 border border-solid border-zinc-700 rounded-xl p-4">
-        <p class="font-bold">Interesting Stuff </p>
-        <hr class="border border-1 border-zinc-600 dark:border-zinc-400 my-2">
-        This is a collection of cool stuff, <br>
-        that I have found on the internet, <br>
-        I find them interesting and / helpful, <br>
-        hopefully, you do too.
+  <section id="blog" class="flex flex-col">
+    <div
+      class="w-[300px] my-10 md:mx-0 border border-solid border-zinc-700 rounded-xl p-4"
+    >
+      <p class="font-bold">Interesting Stuff</p>
+      <hr class="border border-1 border-zinc-600 dark:border-zinc-400 my-2" />
+      This is a collection of cool stuff, <br />
+      that I have found on the internet, <br />
+      I find them interesting and / helpful, <br />
+      hopefully, you do too.
     </div>
 
     <div class="mb-10 flex flex-col md:flex-row">
-        {
-            namesList.map((name, index) => {
-                return (
-                    <Card title={name} description={descriptionsList[index]} link={linksList[index]} />
-                )
-            })
-        }
-  </div>
-
+      {
+        namesList.map((name, index) => {
+          return (
+            <Card
+              title={name}
+              description={descriptionsList[index]}
+              link={linksList[index]}
+            />
+          );
+        })
+      }
+    </div>
   </section>
 </BaseLayout>

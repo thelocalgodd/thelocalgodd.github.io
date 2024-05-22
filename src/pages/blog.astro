@@ -13,16 +13,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       class="p-5 mx-auto md:mx-0 w-[250px] my-14 border border-solid border-zinc-300 rounded-xl"
     >
       <p>
-        <span class="font-semibold"> { postCount } Posts </span>
-        <hr class="border border-dashed border-zinc-600 my-2">
-        <span class="text-sm bg-green-600 text-white px-4 p-[2px] rounded-full">welcome to my blog.</span>
-        <br>
-        I write about things I learn, <br>
+        <span class="font-semibold"> {postCount} Posts </span>
+        <hr class="border border-dashed border-zinc-600 my-2" />
+        <span class="text-sm bg-green-600 text-white px-4 p-[2px] rounded-full"
+          >welcome to my blog.</span
+        >
+        <br />
+        I write about things I learn, <br />
         things I build, and things I find interesting.
       </p>
     </div>
 
-    <ul>
+    <ul class="mx-auto">
       {
         allPosts.map((post) => (
           <BlogPost

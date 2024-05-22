@@ -42,5 +42,6 @@ img {
 
   li #active {
     color: white;
+    border-bottom: 2px solid rgb(0, 189, 0);
   }
 }

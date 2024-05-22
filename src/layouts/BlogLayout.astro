@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={`blog | ${frontmatter.title}`}>
   <li
-    class="list-none my-5 flex items-center flex-col justify-between rounded-md px-3 w-[400px] md:flex-row md:w-auto md:m-5 md:mx-0"
+    class="list-none my-5 flex items-center justify-center flex-col md:justify-between rounded-md md:px-2 md:w-[750px] md:mx-auto md:flex-row md:m-5"
   >
     <p
       class="bg-zinc-300 border border-dashed border-slate-900 px-5 rounded-xl dark:bg-zinc-600 dark:border-white"
@@ -17,7 +17,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.pubDate}
     </p>
   </li>
-  <article class="w-[350px] px-8 md:w-auto md:mx-4">
+  <article class="w-screen px-8 mx-auto md:w-auto">
     <slot />
   </article>
   <br />
