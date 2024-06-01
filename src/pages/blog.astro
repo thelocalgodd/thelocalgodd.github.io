@@ -13,7 +13,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       class="p-4 mx-auto md:mx-0 w-[230px] h-fit my-10 border border-solid border-zinc-300 rounded-xl"
     >
       <p>
-        <span class="font-semibold text-sm"> {postCount} Post(s) </span>
+        <span class="font-semibold text-sm">
+          {postCount}
+          {postCount > 1 ? "posts" : "post"}
+        </span>
         <hr class="border border-dashed border-zinc-600 my-2" />
         <span class="text-sm bg-green-600 text-white px-4 p-[2px] rounded-full"
           >welcome to my blog</span
