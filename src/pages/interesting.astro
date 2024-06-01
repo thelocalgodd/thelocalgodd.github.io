@@ -1,19 +1,34 @@
 ---
 import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import interestingItems from "./interesting-stuff.js";
+import InterestingCard from "../components/InterestingCard.astro";
 ---
 
 <BaseLayout pageTitle="tlg | interesting stuff">
-  <section id="blog" class="flex">
-    <div
-      id="blog-post-count"
-      class="p-4 mx-auto flex md:mx-0 w-[230px] mt-10 rounded-xl"
-    >
+  <section id="blog" class="flex flex-col">
+    <div class="mx-auto flex md:mx-0 my-4 rounded-xl">
       <p>
-        <span class="text-sm bg-green-600 text-white px-4 p-[2px] rounded-full">
+        <span
+          class="text-sm bg-green-600 md:mx-2 text-white px-4 p-[2px] rounded-full"
+        >
           interesting stuff
         </span>
       </p>
+    </div>
+
+    <div id="interesting-stuff" class="grid md:grid-cols-2">
+      {
+        interestingItems.map((item) => {
+          return (
+            <InterestingCard
+              title={item.title}
+              description={item.description}
+            />
+          );
+        })
+      }
     </div>
   </section>
 </BaseLayout>
