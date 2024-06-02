@@ -30,18 +30,18 @@ _It includes amazing benefits such as a year free of a Namespace .me top-level d
 
 <hr><br>
 
-**// prerequisites**
+**\ prerequisites**
 <br>
 
 1. be at least 13 years old.<br>
-2. have a an account on Github (2FA<sup>2</sup> must be enabled).<br>
+2. have a an account on Github (2FA<sup>[2]</sup> must be enabled).<br>
 3. must possess a verified school-issued email that can be verified.<br>
 4. must possess school documents that prove current student status. [student id, admission letter].<br>
 5. at the time of application, you must be currently registered in a program that grants a degree or diploma. <br>
 
 <br>
 
-**// steps**
+**\ steps**
 
 1. first, head over to [<u>github education</u>](https://education.github.com/pack).
 
@@ -50,9 +50,9 @@ _It includes amazing benefits such as a year free of a Namespace .me top-level d
 4. fill the form attached.
 5. submit the form.
 
-_on submitting, your application will be reviewed and accepted between 1hr and 8days_
+_on submission, your application will be reviewed and processed between 1hr and 8days_
 <br><br>
 and... that's about it.
 
 <br><br>
-<sup>2</sup> | Two-Factor Authentication
+<sup>[2]</sup> | Two-Factor Authentication

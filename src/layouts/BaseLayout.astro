@@ -23,30 +23,23 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
       data-website-id="f2eb0fb3-2348-4483-89a8-56906584f090"></script>
 
     <!-- Primary Meta Tags -->
-    <meta
-      name="description"
-      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
-    />
+    <title>{pageTitle} | thelocalogdd</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://test.thelocalgodd.me/" />
-    <meta property="og:title" content="VINCENT KWAKU KPEMLIE | tlg" />
-    <meta
-      property="og:description"
-      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
-    />
-    <meta property="og:image" content="/placeholder" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://test.thelocalgodd.me/" />
-    <meta property="twitter:title" content="tlg | hello world" />
-    <meta
-      property="twitter:description"
-      content="Vincent Kwaku Kpemlie | welcome to my page, I am currently a CS Major at KNUST, Kumasi."
-    />
-    <meta property="twitter:image" content="/placeholder" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
     <link rel="canonical" href={canonicalURL} />
 

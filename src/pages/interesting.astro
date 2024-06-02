@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import BulbIcon from "../../public/icons/bulb.svg";
 import interestingItems from "./interesting-stuff.js";
 import InterestingCard from "../components/InterestingCard.astro";
 ---
@@ -13,7 +13,7 @@ import InterestingCard from "../components/InterestingCard.astro";
         <span
           class="text-sm bg-green-600 md:mx-2 text-white px-4 p-[2px] rounded-full"
         >
-          interesting stuff
+          {BulbIcon} interesting stuff.
         </span>
       </p>
     </div>

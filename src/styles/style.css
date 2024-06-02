@@ -12,8 +12,7 @@ body {
 }
 
 li #active {
-  color: black;
-  border-bottom: 2px solid rgb(0, 189, 0);
+  color: rgb(0, 189, 0);
 }
 
 img {
@@ -38,10 +37,5 @@ img {
 
   svg:hover {
     fill: rgb(233, 233, 233);
-  }
-
-  li #active {
-    color: white;
-    border-bottom: 2px solid rgb(0, 189, 0);
   }
 }
