@@ -6,7 +6,7 @@ import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout pageTitle="tlg | blog">
+<BaseLayout pageTitle="blog" image="/blog-placeholder">
   <section id="blog">
     <div
       id="blog-post-count"
@@ -32,11 +32,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <ul class="mx-auto">
       {
         allPosts.map((post) => (
-          <BlogPost
-            title={post.frontmatter.title}
-            date={post.frontmatter.pubDate}
-            post={post.url}
-          />
+          <div>
+            <BlogPost
+              title={post.frontmatter.title}
+              date={post.frontmatter.pubDate}
+              post={post.url}
+            />
+            <hr />
+          </div>
         ))
       }
     </ul>
