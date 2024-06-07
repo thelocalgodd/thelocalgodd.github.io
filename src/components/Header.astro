@@ -9,11 +9,10 @@ import Navbar from "./Navbar.astro";
 >
   <p class="text-xl mb-5 md:mb-0 md:w-20">
     <a href="/">
-      [ 
-      <span id="logo-header">
-        tlg
-      </span>
-      ]</a>
+      [
+      <span id="logo-header"> tlg </span>
+      ]</a
+    >
   </p>
 
   <Navbar />
@@ -22,7 +21,11 @@ import Navbar from "./Navbar.astro";
     class="flex items-center justify-center border border-solid border-zinc-600 p-1 rounded-2xl mt-5 md:mt-0"
   >
     <li class="mx-2">
-      <a aria-label="email address" href="mailto:splashvincentk@outlook.com" target="_blank">
+      <a
+        aria-label="email address"
+        href="mailto:splashvincentk@outlook.com"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
@@ -48,7 +51,11 @@ import Navbar from "./Navbar.astro";
       </a>
     </li>
     <li class="mx-2">
-      <a aria-label="github.com link" href="https://github.com/thelocalgodd" target="_blank">
+      <a
+        aria-label="github.com link"
+        href="https://github.com/thelocalgodd"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
@@ -64,12 +71,12 @@ import Navbar from "./Navbar.astro";
 </header>
 
 <script>
-import Typewriter from "typewriter-effect/dist/core";
+  import Typewriter from "typewriter-effect/dist/core";
 
-  new Typewriter('#logo-header', {
-    strings: ['tlg', '速度'],
+  new Typewriter("#logo-header", {
+    strings: ["tlg", "速度", "vkk"],
     autoStart: true,
     loop: true,
-    cursor: ''
+    cursor: "",
   });
 </script>

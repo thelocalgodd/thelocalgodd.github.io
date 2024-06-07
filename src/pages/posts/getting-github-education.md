@@ -33,26 +33,29 @@ _It includes amazing benefits such as a year free of a Namespace .me top-level d
 **\ prerequisites**
 <br>
 
-1. be at least 13 years old.<br>
-2. have a an account on Github (2FA<sup>[2]</sup> must be enabled).<br>
-3. must possess a verified school-issued email that can be verified.<br>
-4. must possess school documents that prove current student status. [student id, admission letter].<br>
-5. at the time of application, you must be currently registered in a program that grants a degree or diploma. <br>
+1. \*be at least 13 years old.<br>
+2. \*have a an account on Github (2FA<sup>[2]</sup> must be enabled).<br>
+3. \*must possess a school-issued email that can be verified.<br>
+4. \*must possess school documents that prove current student status. [student id, admission letter].<br>
+5. \*at the time of application, you must be currently registered in a program that grants a degree or diploma. <br>
 
 <br>
 
 **\ steps**
 
-1. first, head over to [<u>github education</u>](https://education.github.com/pack).
+1. \*first, head over to [<u>github education</u>](https://education.github.com/pack).
 
-2. sign in into your github account.
-3. click _sign up for a student developer pack_ button.
-4. fill the form attached.
-5. submit the form.
+2. \*sign in into your github account.
+3. \*click _sign up for a student developer pack_ button.
+4. \*fill the form attached.
+5. \*submit the form.
 
-_on submission, your application will be reviewed and processed between 1hr and 8days_
-<br><br>
-and... that's about it.
+   <br>
+   and... that's about it.
+
+    <br>
+
+   _on submission, your application will be reviewed and processed between 1hr and 8days_
 
 <br><br>
 <sup>[2]</sup> | Two-Factor Authentication

@@ -11,10 +11,6 @@ body {
   background-color: #ebebeb;
 }
 
-li #active {
-  color: rgb(0, 189, 0);
-}
-
 img {
   filter: grayscale(100%);
 }

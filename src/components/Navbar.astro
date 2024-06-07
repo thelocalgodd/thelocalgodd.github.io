@@ -6,19 +6,19 @@ const currentPath = pathname.slice(1);
 ---
 
 <ul class="flex items-center md:justify-start justify-center text-lg">
-  <li
-    class="flex items-center justify-center rounded-full"
-  >
-    <a href="/" class="mx-3" id={currentPath === "" ? "active" : ""}>
-      home
-    </a>
+  <li class="flex items-center justify-center rounded-full">
+    <a href="/" class="mx-3" id={currentPath === "" ? "active" : ""}> home </a>
   </li>
 
-  <li
-    class="flex items-center justify-center rounded-3xl"
-  >
+  <li class="flex items-center justify-center rounded-3xl">
     <a href="/blog" class="mx-3" id={currentPath === "blog" ? "active" : ""}>
       blog
     </a>
   </li>
 </ul>
+
+<style>
+  li #active {
+    color: rgb(0, 189, 0);
+  }
+</style>

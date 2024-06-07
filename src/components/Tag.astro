@@ -1,8 +1,17 @@
 ---
+// destructuring the props object
 const { name } = Astro.props;
 
+const nameArr = name.split(",");
 ---
 
-<div class="border border-dashed w-fit text-sm mt-2 ml-auto border-zinc-500 px-3 rounded-xl mx-2">
-    <p>{ name }</p>
-</div>
+{
+  nameArr.map((name) => (
+    <div
+      class="border border-solid w-fit text-[11px]
+     border-green-600 px-2 py-[0.5px] rounded-xl mx-0.5 mt-1"
+    >
+      <p>{name}</p>
+    </div>
+  ))
+}
