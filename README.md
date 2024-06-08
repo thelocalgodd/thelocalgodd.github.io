@@ -1,3 +1,3 @@
-### another one
+### check out my folio
 
 ![ss](public/ss.png)

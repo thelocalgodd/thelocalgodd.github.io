@@ -22,7 +22,15 @@ _this article talks about how to get a totally free student developer pack fille
 this is a pack of very valuable benefits offered by Github's and it's Partners to verified students.
 <br><br>
 
+**//** Why Should you get it?
+
+<hr><br>
+
 _It includes amazing benefits such as a year free of a Namespace .me top-level domain name, free access to the Github Copilot Pair Programmer while you're a student, just to name a few_
+
+<br>
+
+these benefits and resources will help you as a beginner or (not a beginner) to improve your learning experience.
 
 <br>
 
