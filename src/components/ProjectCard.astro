@@ -1,7 +1,8 @@
 ---
 import Tag from "./Tag.astro";
+import Label from "./Label.astro";
 
-const { title, description, link, tag } = Astro.props;
+const { title, description, link, tag, status } = Astro.props;
 ---
 
 <a href={link} target="_blank">
@@ -10,6 +11,7 @@ const { title, description, link, tag } = Astro.props;
     class="border border-solid border-zinc-600 md:hover:-translate-y-2 hover:border-dashed text-sm p-4 w-[320px] md:w-[250px] my-2 mx-2 rounded-xl flex flex-col"
   >
     <p class="text-zinc-600 dark:text-zinc-400">{title}</p>
+    <!-- <Label status={status} /> -->
     <hr class="text-zinc-300 my-2" />
     <p class="my-2">{description}</p>
     <div class="flex flex-row flex-wrap">

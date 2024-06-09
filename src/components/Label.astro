@@ -1,0 +1,14 @@
+---
+const { name, completed } = Astro.props;
+---
+
+<!-- 3 status states: completed, working on it -->
+<div>
+  <p
+    class={completed
+      ? "bg-red-400 px-4 py-[2px] text-xs w-fit rounded-xl"
+      : "bg-green-400 px-4 py-[2px] text-xs w-fit rounded-xl"}
+  >
+    {name || "done"}
+  </p>
+</div>
