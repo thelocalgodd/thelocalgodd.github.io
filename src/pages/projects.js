@@ -1,22 +1,23 @@
 const projectItems = [
   {
     title: "thelocalgodd.github.io",
-    description: "this is my current portfolio website.",
+    description:
+      "this is my current portfolio website I use to blog and showcase my work.",
     link: "https://thelocalgodd.me",
     tag: "astro, tailwindcss",
   },
   {
-    title: "tailwind-auto-script",
+    title: "Calculator App",
     description:
-      "this is a basic bash script I wrote to automate the process of creating a new vite + react project and adding tailwind automatically.",
+      "this is a bash script that helps to bootsrap creating a new vite + react project and adding tailwind automatically.",
     link: "https://github.com/thelocalgodd/tailwind-auto-script",
     tag: "bash",
   },
   {
-    title: "todo-app-cli",
-    description: "this is a simple todo app that runs on the command line.",
-    link: "https://github.com/thelocalgodd/weekend-projects/tree/master/todo-cli",
-    tag: "nodeJS, mongodb, expressJS",
+    title: "Dictionary Web App w/ Audio",
+    description: "A Dictionary App that has automatic word pronunciation.",
+    link: "http://thelocalgodd.me/dict-app/",
+    tag: "html, css, javascript, API",
   },
 ];
 
