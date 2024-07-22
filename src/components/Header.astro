@@ -7,16 +7,13 @@ import Navbar from "./Navbar.astro";
   id="container"
   class="flex flex-col md:h-10 md:flex-row md:items-start md:justify-between items-center justify-between text-xl mt-5 min-w-max"
 >
-  <p class="text-xl mb-5 md:mb-0 md:w-20">
+  <p class="text-base mb-5 md:mb-0 md:w-20">
     <a href="/">
       [
       <span id="logo-header"> tlg </span>
       ]</a
     >
   </p>
-
-  <Navbar />
-
   <ul
     class="flex items-center justify-center border border-solid border-zinc-600 p-1 rounded-2xl mt-5 md:mt-0"
   >
@@ -28,7 +25,7 @@ import Navbar from "./Navbar.astro";
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20px"
+          width="15px"
           viewBox="0 0 512 512"
         >
           <path
@@ -41,7 +38,7 @@ import Navbar from "./Navbar.astro";
       <a aria-label="x.com link" href="https://x.com/dzidula_1" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20px"
+          width="15px"
           viewBox="0 0 512 512"
         >
           <path
@@ -58,7 +55,7 @@ import Navbar from "./Navbar.astro";
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20px"
+          width="15px"
           viewBox="0 0 448 512"
         >
           <path
@@ -69,6 +66,8 @@ import Navbar from "./Navbar.astro";
     </li>
   </ul>
 </header>
+
+<Navbar />
 
 <script>
   import Typewriter from "typewriter-effect/dist/core";

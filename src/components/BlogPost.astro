@@ -4,7 +4,7 @@ const { title, date, post } = Astro.props;
 
 <a href=`${post}` target="_self">
   <li
-    class="list-none my-1 flex justify-between px-2 w-screen md:mx-auto md:w-[800px]"
+    class="list-none my-1 flex justify-between px-2 w-screen md:mx-auto md:w-[800px] border-t border-zinc-300 dark:border-zinc-500"
   >
     <p>{title}</p>
     <p class="text-zinc-500 dark:text-zinc-300">{date}</p>

@@ -16,6 +16,7 @@ _This is a story of how I got into coding, as a fresher in KNUST. I talk about h
 
 **///** _First Steps (Late First Semester, 2023)_
 
+
 ---
 
 <br>
@@ -26,8 +27,7 @@ My journey began unexpectedly. I had started a four-year Computer Science progra
 So I got onto w3schools and learned the basics of C++. It was bliss! I found it very interesting and fun and to keep my skills sharp, I started tackling a set of 49 practice questions (by Dr. Hayfron Acquah) – which were also potential exam questions.
 
 <br>
-<br>
-I solved what I could and uploaded them to GitHub <sub>[1](#github-footer)</sub>. The remaining unsolved questions are still out there; maybe I'll revisit them in the near future.
+I solved what I could and uploaded them to GitHub <sub>[1]</sub>. The remaining unsolved questions are still out there; maybe I'll revisit them in the near future.
 <br>
 <br>
 When the actual C++ course started, I found it easy and did well in the end.
