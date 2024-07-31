@@ -1,6 +1,6 @@
 ---
 title: "getting github education"
-pubDate: June 1, 2024
+pubDate: 2024-06-01
 description: "This article talks about how you can get a free student developer pack through github education."
 author: "thelocalgodd"
 tags: ["free-stuff", "coding", "github education"]

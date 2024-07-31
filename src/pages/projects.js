@@ -7,17 +7,16 @@ const projectItems = [
     tag: "astro, tailwindcss",
   },
   {
-    title: "Calculator App",
-    description:
-      "this is a bash script that helps to bootsrap creating a new vite + react project and adding tailwind automatically.",
-    link: "https://github.com/thelocalgodd/tailwind-auto-script",
-    tag: "bash",
+    title: "thelocalblog",
+    description: "fullstack markdown blog with CRUD functionality",
+    link: "https://github.com/thelocalgodd/thelocalblog",
+    tag: "reactjs, tailwindcss, expressjs, nodejs, mongodb",
   },
   {
-    title: "Dictionary Web App w/ Audio",
-    description: "A Dictionary App that has automatic word pronunciation.",
-    link: "http://thelocalgodd.me/dict-app/",
-    tag: "html, css, javascript, API",
+    title: "todo web app",
+    description: "coming soon lol.",
+    link: "http://thelocalgodd.me/null/",
+    tag: "null",
   },
 ];
 

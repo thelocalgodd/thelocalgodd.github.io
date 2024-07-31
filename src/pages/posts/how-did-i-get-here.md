@@ -1,6 +1,6 @@
 ---
 title: "how did I get here"
-pubDate: April 20, 2024
+pubDate: 2024-04-20
 description: "This is the first post of my new Astro blog."
 author: "thelocalgodd"
 tags: ["story", "blogging", "learning in public"]

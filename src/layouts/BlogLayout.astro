@@ -2,6 +2,16 @@
 import "../styles/style.css";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+
+const formatDate = (isoString: string): string => {
+  const date = new Date(isoString);
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return date.toLocaleDateString(undefined, options);
+};
 ---
 
 <BaseLayout
@@ -17,7 +27,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.title}
     </p>
     <p class="text-zinc-500 my-2">
-      {frontmatter.pubDate}
+      {formatDate(frontmatter.pubDate)}
     </p>
   </li>
 
