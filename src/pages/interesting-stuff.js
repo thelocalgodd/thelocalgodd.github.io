@@ -11,6 +11,11 @@ const interestingItems = [
     description: "a large collection of free and cool stuff on the internet",
     link: "https://fmhy.net",
   },
+  {
+    title: "braflix",
+    description: "netflix style streaming site for all sorts of content",
+    link: "https://braflix.ru",
+  },
 ];
 
 export default interestingItems;
