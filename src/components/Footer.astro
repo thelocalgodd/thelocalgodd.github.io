@@ -6,17 +6,20 @@ const year = date.getFullYear();
 <hr class="mx-auto flex border-solid border border-zinc-400 mb-4" />
 
 <footer
-  class="flex justify-between w-[350px] md:w-auto md:px-10 mx-auto mb-2 px-3 text-sm"
+  class="flex justify-between w-[350px] md:w-auto mx-auto mb-2 px-3 md:px-1 text-sm"
 >
   <div id="left" class="">
     <p>&copy; {year} | thelocalgodd</p>
     <p class="text-zinc-400">astro | tailwind | github pages</p>
 
-    <div
-      class="border border-dashed border-zinc-600 w-fit px-5 rounded-full mt-2"
-    >
+    <div>
       <p>
-        <a href="/interesting"> interesting </a>
+        <a
+          class="inline-block text-xs my-2 rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-4 border-dashed dark:border-zinc-200 dark:bg-zinc-300 dark:bg-opacity-10 dark:text-zinc-300"
+          href="/interesting"
+        >
+          interesting
+        </a>
       </p>
     </div>
   </div>
