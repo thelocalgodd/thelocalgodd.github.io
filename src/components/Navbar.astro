@@ -32,9 +32,27 @@ const currentPath = pathname.slice(1);
 </ul>
 
 <style>
+  :root {
+    --light-blue: rgb(219 234 254);
+    --light-blue-border: rgb(191 219 254);
+    --dark-green: rgb(22 101 52);
+    --dark-green-border: rgb(0, 184, 67);
+  }
   li #active {
-    background-color: green;
-    padding: 1px 5px;
-    border-radius: 10px;
+    display: inline-block;
+    border-radius: 0.5rem;
+    border: 1px solid var(--light-blue-border);
+    background-color: var(--light-blue);
+    opacity: 0.8;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    li #active {
+      border-color: var(--dark-green-border);
+      background-color: var(--dark-green);
+      color: rgb(34 197 94);
+    }
   }
 </style>
