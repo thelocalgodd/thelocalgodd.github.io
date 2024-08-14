@@ -1,8 +1,7 @@
 ---
 import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BulbIcon from "../../public/icons/bulb.svg";
-import interestingItems from "./interesting-stuff.js";
+import interestingItems from "../config/interesting-stuff.js";
 import InterestingCard from "../components/InterestingCard.astro";
 ---
 
@@ -26,7 +25,7 @@ import InterestingCard from "../components/InterestingCard.astro";
               title={item.title}
               description={item.description}
               link={item.link}
-              linkText={item.linkText || "vist"}
+              linkText={item.linkText || "visit"}
             />
           );
         })

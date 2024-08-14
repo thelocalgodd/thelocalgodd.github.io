@@ -1,17 +1,17 @@
 ---
 import Tag from "./Tag.astro";
-import Label from "./Label.astro";
 
-const { title, description, link, tag, status } = Astro.props;
+const { title, description, link, tag } = Astro.props;
 ---
 
 <a href={link} target="_blank">
   <div
     id="project"
-    class="border border-solid border-zinc-600 md:hover:-translate-y-2 hover:border-dashed text-sm p-4 w-[320px] md:w-[250px] my-2 mx-2 rounded-xl flex flex-col"
+    class="border border-solid hover:border-dashed text-sm p-4 w-[320px] md:w-[250px] my-2 rounded-xl flex flex-col border-blue-300 bg-blue-100 bg-opacity-0 px-2 dark:border-zinc-500 dark:bg-zinc-300 dark:bg-opacity-0 dark:text-zinc-500"
   >
-    <p class="text-zinc-600 dark:text-zinc-400">{title}</p>
-    <!-- <Label status={status} /> -->
+    <p class="text-zinc-600 dark:text-zinc-400">
+      {title}
+    </p>
     <hr class="text-zinc-300 my-2" />
     <p class="my-2">{description}</p>
     <div class="flex flex-row flex-wrap">

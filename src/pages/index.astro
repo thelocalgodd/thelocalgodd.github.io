@@ -1,7 +1,7 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import projectItems from "../pages/projects.js";
+import projectItems from "../config/projects.js";
 import { TelegramIcon } from "../components/icons/icons.jsx";
 const pageTitle = "hello world";
 ---
@@ -43,7 +43,7 @@ const pageTitle = "hello world";
       </div>
       <p>
         <a
-          class="my-2 w-fit px-2 pr-3 mx-0 text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 dark:border-blue-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-blue-500 text-blue-400 flex flex-row hover:text-blue-300 items-center"
+          class="my-2 w-fit px-2 pr-3 gap-1 mx-0 text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 dark:border-blue-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-blue-500 text-blue-400 flex flex-row hover:text-blue-300 items-center"
           href="https://t.me/thelocalgodd"
           target="_blank"
         >
@@ -90,7 +90,7 @@ const pageTitle = "hello world";
       featured projects
     </p>
     <div
-      class="grid md:grid-cols-3 gap-x-4 items-center justify-center md:flex-row"
+      class="grid md:grid-cols-3 items-center md:items-start justify-center md:flex-row"
     >
       {
         projectItems.map((project) => (
