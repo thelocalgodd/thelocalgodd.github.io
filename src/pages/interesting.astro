@@ -17,7 +17,10 @@ import InterestingCard from "../components/InterestingCard.astro";
       </p>
     </div>
 
-    <div id="interesting-stuff" class="grid md:grid-cols-2">
+    <div
+      id="interesting-stuff"
+      class="grid md:grid-cols-2 md:gap-x-2 mx-4 md:mx-0"
+    >
       {
         interestingItems.map((item) => {
           return (
