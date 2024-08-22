@@ -18,20 +18,33 @@ const formatDate = (isoString: string): string => {
   pageTitle={`post | ${frontmatter.title}`}
   image="/blog-placeholder.png"
 >
-  <li
-    class="list-none my-5 flex items-center justify-center flex-col md:justify-between rounded-md md:px-2 md:w-[750px] md:mx-auto md:flex-row md:m-5"
-  >
-    <p
-      class="border border-solid border-slate-900 px-5 rounded-xl dark:border-zinc-500"
+  <div class="my-4">
+    <li
+      class="list-none flex items-center justify-center flex-col md:justify-between rounded-md md:w-[800px] md:mx-auto md:flex-row md:mt-4"
     >
-      {frontmatter.title}
-    </p>
-    <p class="text-zinc-500 my-2">
-      {formatDate(frontmatter.pubDate)}
-    </p>
-  </li>
+      <p
+        class="border text-sm border-solid border-slate-900 px-5 rounded-xl dark:border-zinc-500"
+      >
+        {frontmatter.title}
+      </p>
+      <p class="text-zinc-500 text-sm">
+        {formatDate(frontmatter.pubDate)}
+      </p>
+    </li>
+  </div>
+  <div class="text-sm md:flex gap-2 mb-4 hidden">
+    {
+      frontmatter.tags.map((tag) => (
+        <a href={`/tags/${tag}`}>
+          <p class="inline-block text-xs rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500">
+            {tag}
+          </p>
+        </a>
+      ))
+    }
+  </div>
 
-  <div class="w-screen px-8 mx-auto md:w-auto">
+  <div class="w-screen mx-auto md:w-auto px-4 md:px-0 text-sm">
     <slot />
   </div>
   <br />

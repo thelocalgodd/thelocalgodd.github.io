@@ -9,7 +9,7 @@ const projectItems = [
   {
     title: "thelocalblog",
     description: "fullstack markdown blog with CRUD functionality",
-    link: "https://github.com/thelocalgodd/thelocalblog",
+    link: "https://github.com/thelocalgodd/thelocalblog404",
     tag: "reactjs, tailwindcss, expressjs, nodejs, mongodb",
   },
   {
