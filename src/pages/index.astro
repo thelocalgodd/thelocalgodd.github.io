@@ -3,10 +3,21 @@ import ProjectCard from "../components/ProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import projectItems from "../lib/projects.js";
 import { TelegramIcon } from "../components/icons/icons.jsx";
-const pageTitle = "hello world";
+import BlogPost from "../components/BlogPost.astro";
+const blogPosts = await Astro.glob("../pages/posts/*.md");
+
+const formatDate = (isoString: string): string => {
+  const date = new Date(isoString);
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return date.toLocaleDateString(undefined, options);
+};
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle="hello">
   <section
     id="welcome"
     class="flex flex-col-reverse md:flex-row items-center md:justify-center mx-4 md:mx-auto"
@@ -22,9 +33,7 @@ const pageTitle = "hello world";
           >Vincent Kwaku Kpemlie</span
         >, an aspiring Software Engineer and Cybersecurity Enthusiast. I am
         currently learning -
-        <span class="text-green-600">
-          React Native for Mobile App Development.
-        </span>
+        <span class="text-green-600"> ReactJS for Web Development. </span>
         <br />
         <br />
       </p>
@@ -44,7 +53,7 @@ const pageTitle = "hello world";
       </div>
       <p>
         <a
-          class="my-2 w-fit px-2 pr-3 gap-1 mx-0 text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 dark:border-blue-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-blue-500 text-blue-400 flex flex-row hover:text-blue-300 items-center"
+          class="my-1 w-fit px-2 pr-3 gap-1 text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 dark:border-blue-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-blue-500 text-blue-400 flex flex-row hover:text-blue-300 items-center"
           href="https://t.me/thelocalgodd"
           target="_blank"
         >
@@ -60,28 +69,45 @@ const pageTitle = "hello world";
   >
     <p class="text-zinc-600 dark:text-zinc-400">💻 Tools & Technologies</p>
     <p>
-      <div class="my-2">
+      <div class="my-2 flex flex-col md:flex-row">
         <span
-          class="inline-block text-sm rounded-lg border border-green-200 bg-green-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
+          class="text-sm rounded-lg border border-green-200 bg-green-100 bg-opacity-50 px-2 mr-1 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
           >Languages</span
         >
         HTML, CSS, Javascript, Python, Bash
       </div>
-      <div class="my-2">
+      <div class="my-2 flex flex-col md:flex-row">
         <span
-          class="inline-block text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-blue-800 dark:bg-blue-300 dark:bg-opacity-10 dark:text-blue-500"
+          class="text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 mr-1 dark:border-blue-800 dark:bg-blue-300 dark:bg-opacity-10 dark:text-blue-500"
           >Frameworks</span
         >
         ReactJS, Astro, NodeJS, ExpressJS
       </div>
-      <div class="my-2">
+      <div class="my-2 flex flex-col md:flex-row">
         <span
-          class="inline-block text-sm rounded-lg border border-zinc-400 bg-zinc-400 bg-opacity-40 px-2 dark:border-zinc-500 dark:bg-zinc-300 dark:bg-opacity-10 dark:text-zinc-500"
+          class="text-sm rounded-lg border border-zinc-400 bg-zinc-400 bg-opacity-40 px-2 mr-1 dark:border-zinc-500 dark:bg-zinc-300 dark:bg-opacity-10 dark:text-zinc-500"
           >Tools</span
         >
         Git, Github, Photoshop, Figma, VSCode, Linux
       </div>
     </p>
+  </section>
+
+  <section
+    class="py-5 rounded-xl mx-auto w-[350px] md:w-full md:mx-auto text-sm"
+  >
+    <p class="text-zinc-600 dark:text-zinc-400">📃 Featured Post</p>
+    <div>
+      {
+        (
+          <BlogPost
+            title={blogPosts[0].frontmatter.title}
+            date={formatDate(blogPosts[0].frontmatter.pubDate)}
+            post={blogPosts[0].url}
+          />
+        )
+      }
+    </div>
   </section>
 
   <section id="featured-projects" class="py-5 rounded-xl my-5 mx-auto">
@@ -106,13 +132,13 @@ const pageTitle = "hello world";
     </div>
 
     <p class="my-1 flex text-sm justify-center md:justify-start mt-5">
-      🔗 | all projects here<a href="https://github.com/thelocalgodd"
+      🔗 | all projects here<a href="/projects"
         ><u class="underline-offset-4 hover:text-zinc-600 ml-1">here</u></a
       >
     </p>
 
     <p
-      class="flex justify-center mt-5 text-xs text-gray-400 border-l border-dashed border-red-400 w-fit px-4 mx-auto"
+      class="flex mt-5 text-xs text-gray-400 border-r border-dotted border-red-400 w-fit px-4 mx-auto"
     >
       see you space cowboy...
     </p>

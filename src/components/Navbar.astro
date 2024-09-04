@@ -7,18 +7,28 @@ const currentPath = pathname.slice(1);
 
 <nav>
   <ul
-    class="flex items-center md:justify-start justify-center text-sm mt-4 md:mt-0 transition-all"
+    class="flex justify-start mx-4 md:mx-0 text-sm mt-1 md:mt-0 transition-all gap-4"
   >
     <li class="flex items-center justify-center rounded-full">
-      <a href="/" class="mx-3md:mx-0" id={currentPath === "" ? "active" : ""}>
+      <a href="/" class="" id={currentPath === "" ? "active" : ""}>
         {currentPath === "" ? "🛖 home" : "home"}
+      </a>
+    </li>
+
+    <li class="flex items-center justify-center rounded-full">
+      <a
+        href="/projects"
+        class=""
+        id={currentPath === "projects" ? "active" : ""}
+      >
+        {currentPath === "projects" ? "👩‍💻 projects" : "projects"}
       </a>
     </li>
 
     <li class="flex items-center justify-center rounded-3xl">
       <a
         href="/blog"
-        class="mx-3"
+        class=""
         id={currentPath.startsWith("blog") || currentPath.startsWith("posts")
           ? "active"
           : ""}
@@ -47,8 +57,7 @@ const currentPath = pathname.slice(1);
     border: 1px solid var(--light-blue-border);
     background-color: var(--light-blue);
     opacity: 0.8;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: -0 0.5rem;
   }
 
   @media (prefers-color-scheme: dark) {
