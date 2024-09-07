@@ -22,17 +22,29 @@ const formatDate = (isoString: string): string => {
     id="welcome"
     class="flex flex-col-reverse md:flex-row items-center md:justify-center mx-4 md:mx-auto"
   >
-    <div class="py-5 mt-2 rounded-xl md:mr-16">
+    <div class="py-5 mt-16 rounded-xl md:mr-16">
       <p
-        class="inline-block text-sm my-2 rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
+        class="inline-block text-sm mt-2 mb-4 rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
       >
         🫡 welcome
       </p>
       <p>
-        my name is <span class="dark:text-zinc-400 text-blue-400"
+        Hello! I'm <span class="dark:text-zinc-400 text-blue-400"
           >Vincent Kwaku Kpemlie</span
-        >, an aspiring Software Engineer and Cybersecurity Enthusiast. I am
-        currently learning -
+        >, an aspiring Software Engineer and Cybersecurity Enthusiast - welcome
+        to my website.
+        <br />
+        <br />
+        On this site, you'll find information about me, <a
+          class="text-sm mt-2 mx-0.5 rounded-lg bg-blue-100 bg-opacity-50 px-2 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
+          href="/blog"
+          >my blog posts
+        </a>
+        and <a
+          class="text-sm mt-2 rounded-lg bg-blue-100 bg-opacity-50 px-2 dark:bg-blue-300 dark:bg-opacity-10 dark:text-blue-500"
+          href="/projects">my projects</a
+        >.
+        <br /> I am currently learning -
         <span class="text-green-600"> ReactJS for Web Development. </span>
         <br />
         <br />
@@ -40,13 +52,13 @@ const formatDate = (isoString: string): string => {
       <div>
         <button>
           <a
-            class="inline-block text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-blue-800 dark:bg-blue-300 dark:bg-opacity-10 dark:text-blue-500"
+            class="text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-blue-800 dark:bg-blue-300 dark:bg-opacity-10 dark:text-blue-500"
             href={"/vkkpemlie-resume.pdf"}>📄 resume</a
           >
         </button>
         <button>
           <a
-            class="inline-block text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
+            class="text-sm rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
             href="/blog">📝 read blog</a
           >
         </button>
@@ -137,10 +149,16 @@ const formatDate = (isoString: string): string => {
       >
     </p>
 
-    <p
+    <!-- <p
       class="flex mt-5 text-xs text-gray-400 border-r border-dotted border-red-400 w-fit px-4 mx-auto"
     >
       see you space cowboy...
+    </p> -->
+
+    <p
+      class="flex mt-5 text-xs text-gray-400 border-r border-l border-dotted border-red-400 w-fit px-4 mx-auto"
+    >
+      美しいものを求めて - in search of something beautiful
     </p>
   </section>
 </BaseLayout>
