@@ -20,7 +20,7 @@ const currentPath = pathname.slice(1);
         href="/projects"
         id={currentPath.startsWith("projects") ? "active" : ""}
       >
-        {currentPath === "projects" ? "👩‍💻 projects" : "projects"}
+        {currentPath.startsWith("projects") ? "👩‍💻 projects" : "projects"}
       </a>
     </li>
 
