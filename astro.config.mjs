@@ -6,5 +6,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://thelocalgodd.me",
   integrations: [tailwind(), react()],
-  output: "hybrid",
+  output: "static",
 });
