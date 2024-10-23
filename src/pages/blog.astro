@@ -26,27 +26,30 @@ allPosts.sort(
 <BaseLayout pageTitle="blog" image="/blog-placeholder.png">
   <section id="blog">
     <div id="blog-post-count" class="mx-auto md:mx-0 w-[230px] h-fit my-8">
-      <p>
+      <span
+        class="inline-block text-sm mt-2 rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
+      >
+        welcome to my blog
+      </span>
+
+      <p class="my-2">
         <span class="font-semibold text-sm">
           {postCount}
           {postCount > 1 ? "posts" : "post"}
         </span>
-        <hr class="border border-dashed border-zinc-600 my-2" />
-        <span class="text-sm bg-green-600 text-white px-4 p-[2px] rounded-full">
-          welcome to my blog
-        </span>
+
         <br />
-        <span class="text-sm">
+        <div class="text-sm border p-2 rounded-lg border-zinc-700">
           I write about things I learn, <br />
           things I build, and things I find interesting.
-        </span>
+        </div>
       </p>
     </div>
 
     <ul class="mx-auto">
       {
         allPosts.map((post) => (
-          <div>
+          <div class="odd:dark:bg-zinc-700 odd:bg-blue-100 even:border-l even:border-l-gray-500">
             <BlogPost
               title={post.frontmatter.title}
               date={formatDate(post.frontmatter.pubDate)}

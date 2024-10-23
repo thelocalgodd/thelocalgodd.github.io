@@ -10,17 +10,13 @@ const currentPath = pathname.slice(1);
     class="flex justify-start mx-4 md:mx-0 text-sm mt-1 md:mt-0 transition-all gap-4"
   >
     <li class="flex items-center justify-center rounded-full">
-      <a href="/" class="" id={currentPath === "" ? "active" : ""}>
+      <a href="/" id={currentPath === "" ? "active" : ""}>
         {currentPath === "" ? "🛖 home" : "home"}
       </a>
     </li>
 
     <li class="flex items-center justify-center rounded-full">
-      <a
-        href="/projects"
-        class=""
-        id={currentPath === "projects" ? "active" : ""}
-      >
+      <a href="/projects" id={currentPath === "projects" ? "active" : ""}>
         {currentPath === "projects" ? "👩‍💻 projects" : "projects"}
       </a>
     </li>
@@ -28,7 +24,6 @@ const currentPath = pathname.slice(1);
     <li class="flex items-center justify-center rounded-3xl">
       <a
         href="/blog"
-        class=""
         id={currentPath.startsWith("blog") || currentPath.startsWith("posts")
           ? "active"
           : ""}
