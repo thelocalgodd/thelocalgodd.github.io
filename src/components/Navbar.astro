@@ -16,7 +16,10 @@ const currentPath = pathname.slice(1);
     </li>
 
     <li class="flex items-center justify-center rounded-full">
-      <a href="/projects" id={currentPath === "projects" ? "active" : ""}>
+      <a
+        href="/projects"
+        id={currentPath.startsWith("projects") ? "active" : ""}
+      >
         {currentPath === "projects" ? "👩‍💻 projects" : "projects"}
       </a>
     </li>

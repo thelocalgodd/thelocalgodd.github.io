@@ -25,11 +25,11 @@ allPosts.sort(
 
 <BaseLayout pageTitle="blog" image="/blog-placeholder.png">
   <section id="blog">
-    <div id="blog-post-count" class="mx-auto md:mx-0 w-[230px] h-fit my-8">
+    <div id="blog-post-count" class="mx-auto md:mx-0 w-[230px] h-fit">
       <span
         class="inline-block text-sm mt-2 rounded-lg border border-blue-200 bg-blue-100 bg-opacity-50 px-2 dark:border-green-800 dark:bg-green-300 dark:bg-opacity-10 dark:text-green-500"
       >
-        welcome to my blog
+        📖 blog
       </span>
 
       <p class="my-2">
@@ -49,7 +49,7 @@ allPosts.sort(
     <ul class="mx-auto">
       {
         allPosts.map((post) => (
-          <div class="odd:dark:bg-zinc-700 odd:bg-blue-100 even:border-l even:border-l-gray-500">
+          <div class="odd:dark:bg-zinc-800 odd:bg-blue-50 odd:border-l odd:border-l-zinc-500 ">
             <BlogPost
               title={post.frontmatter.title}
               date={formatDate(post.frontmatter.pubDate)}
