@@ -33,7 +33,7 @@ allPosts.sort(
       </span>
 
       <p class="my-2">
-        <span class="font-semibold text-sm">
+        <span class="mx-2 font-semibold text-sm">
           {postCount}
           {postCount > 1 ? "posts" : "post"}
         </span>
@@ -49,7 +49,7 @@ allPosts.sort(
     <ul class="mx-auto mt-16">
       {
         allPosts.map((post) => (
-          <div class="odd:dark:bg-zinc-800 odd:bg-blue-50 odd:border-l odd:border-l-zinc-500 ">
+          <div class="odd:dark:bg-zinc-800 odd:bg-blue-50 ">
             <BlogPost
               title={post.frontmatter.title}
               date={formatDate(post.frontmatter.pubDate)}
