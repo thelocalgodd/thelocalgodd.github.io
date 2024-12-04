@@ -2,6 +2,8 @@
 import BlogPost from "../components/BlogPost.astro";
 import "../styles/style.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectPageProjectCard from "../components/ProjectsPageProjectCard.astro";
+import projectItems from "../lib/projects";
 
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const postCount = allPosts.length;
@@ -41,8 +43,34 @@ allPosts.sort(
         </div>
       </p>
     </div>
+  </section>
 
-    <div>hello</div>
+  <section id="featured-projects" class="py-5 rounded-xl my-5 mx-auto">
+    <p
+      class="text-zinc-600 text-sm dark:text-zinc-400 flex justify-center md:justify-start"
+    >
+      🧑‍🌾 Featured Projects
+    </p>
+    <div
+      class="grid md:grid-cols-3 items-center gap-2 md:items-start justify-center md:flex-row"
+    >
+      {
+        projectItems.map((project) => (
+          <ProjectPageProjectCard
+            title={project.title}
+            link={project.link}
+            description={project.description}
+            tag={project.tag}
+          />
+        ))
+      }
+    </div>
+
+    <p class="my-1 flex text-sm justify-center md:justify-start mt-5">
+      🔗 all projects here<a href="/projects"
+        ><u class="underline-offset-4 hover:text-zinc-600 ml-1">here</u></a
+      >
+    </p>
   </section>
 </BaseLayout>
 
