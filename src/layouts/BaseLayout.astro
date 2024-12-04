@@ -47,7 +47,14 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
 
     <script defer>
       fetch("https://analytics.thelocalgodd.me/api", {
+        // fetch("http://localhost:3002/api", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          screenWidth: window.innerWidth,
+        }),
       });
     </script>
 

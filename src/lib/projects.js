@@ -7,16 +7,10 @@ const projectItems = [
     tag: "astro, tailwindcss",
   },
   {
-    title: "thelocalblog",
-    description: "fullstack markdown blog with CRUD functionality",
-    link: "https://github.com/thelocalgodd/thelocalblog404",
-    tag: "reactjs, tailwindcss, expressjs, nodejs, mongodb",
-  },
-  {
-    title: "todo web app",
-    description: "coming soon lol.",
-    link: "http://thelocalgodd.me/null/",
-    tag: "null",
+    title: "analytics system",
+    description: "a full stack self-hosted analytics system I built.",
+    link: "https://github.com/thelocalgodd/analytics-system",
+    tag: "react, tailwindcss, node, express, mongodb",
   },
 ];
 
