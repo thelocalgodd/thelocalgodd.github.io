@@ -132,12 +132,12 @@ const formatDate = (isoString: string): string => {
       class="grid md:grid-cols-3 items-center md:items-start justify-center md:flex-row"
     >
       {
-        projectItems.map((project) => (
+        projectItems.slice(0, 2).map((project) => (
           <ProjectCard
-            title={project.title}
-            description={project.description}
-            link={project.link}
-            tag={project.tag}
+        title={project.title}
+        description={project.description}
+        link={project.link}
+        tag={project.tag}
           />
         ))
       }

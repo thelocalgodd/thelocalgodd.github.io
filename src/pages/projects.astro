@@ -47,7 +47,7 @@ allPosts.sort(
 
   <section id="featured-projects" class="py-5 rounded-xl my-5 mx-auto">
     <p
-      class="text-zinc-600 text-sm dark:text-zinc-400 flex justify-center md:justify-start"
+      class="text-zinc-600 text-sm dark:text-zinc-400 flex justify-center md:justify-start mb-4"
     >
       🧑‍🌾 Featured Projects
     </p>
@@ -55,7 +55,7 @@ allPosts.sort(
       class="grid md:grid-cols-3 items-center gap-2 md:items-start justify-center md:flex-row"
     >
       {
-        projectItems.map((project) => (
+        projectItems.slice(0, 3).map((project) => (
           <ProjectPageProjectCard
             title={project.title}
             link={project.link}
@@ -66,8 +66,29 @@ allPosts.sort(
       }
     </div>
 
+    <p
+    class="text-zinc-600 text-sm dark:text-zinc-400 flex justify-center md:justify-start mt-16 mb-4"
+  >
+    ⚒️ More Projects
+  </p>
+  <div
+    class="grid md:grid-cols-3 items-center gap-2 md:items-start justify-center md:flex-row"
+  >
+    {
+      projectItems.slice(3).map((project) => (
+        <ProjectPageProjectCard
+          title={project.title}
+          link={project.link}
+          description={project.description}
+          tag={project.tag}
+        />
+      ))
+    }
+  </div>
+
+
     <p class="my-1 flex text-sm justify-center md:justify-start mt-5">
-      🔗 all projects here<a href="/projects"
+      🔗 check out my github repositories<a href="https://github.com/thelocalgodd"
         ><u class="underline-offset-4 hover:text-zinc-600 ml-1">here</u></a
       >
     </p>
