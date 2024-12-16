@@ -49,7 +49,7 @@ allPosts.sort(
     <ul class="mx-auto mt-16">
       {
         allPosts.map((post) => (
-          <div class="odd:dark:bg-zinc-800 odd:bg-blue-50 ">
+          <div class="odd:bg-zinc-500">
             <BlogPost
               title={post.frontmatter.title}
               date={formatDate(post.frontmatter.pubDate)}
