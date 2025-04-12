@@ -5,7 +5,6 @@ import { ViewTransitions } from "astro:transitions";
 import Loader from "../components/Loader.astro";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
 ---
 
@@ -55,6 +54,31 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
         body: JSON.stringify({
           screenWidth: window.innerWidth,
         }),
+      });
+    </script>
+
+    <!-- Add Socket.IO client -->
+    <script>
+      import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
+      // Connect to your WebSocket server
+      const socket = io("http://localhost:3002", {
+        transports: ["websocket"],
+      });
+
+      // Send visitor data when page loads
+      socket.emit("new-visitor", {
+        screenWidth: window.innerWidth,
+        path: window.location.pathname,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
+
+      }, () => {
+        console.log("Visitor data sent");
+      });
+
+      // Optional: Listen for other visitors if you want to show real-time stats
+      socket.on("new-visitor", (data) => {
+        console.log("New visitor:", data);
       });
     </script>
 
