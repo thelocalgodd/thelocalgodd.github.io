@@ -63,6 +63,11 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
       // Connect to your WebSocket server
       const socket = io("https://analytics.thelocalgodd.me", {
         transports: ["websocket"],
+        secure: false,
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
       });
 
       // Send visitor data when page loads
