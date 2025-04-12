@@ -58,16 +58,16 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     </script>
 
     <!-- Add Socket.IO client -->
+    <script is:inline src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
     <script>
-      import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
       // Connect to your WebSocket server
       const socket = io("https://analytics.thelocalgodd.me", {
         transports: ["websocket"],
         secure: false,
-      reconnection: true,
-      reconnectionAttempts: 5,
-      reconnectionDelay: 1000,
-      reconnectionDelayMax: 5000,
+        reconnection: true,
+        reconnectionAttempts: 5,
+        reconnectionDelay: 1000,
+        reconnectionDelayMax: 5000,
       });
 
       // Send visitor data when page loads
@@ -82,7 +82,7 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
       });
 
       // Optional: Listen for other visitors if you want to show real-time stats
-      socket.on("new-visitor", (data) => {
+      socket.on("new-visitor", (data: {screenWidth: number, path: string, timestamp: string, userAgent: string}) => {
         console.log("New visitor:", data);
       });
     </script>
