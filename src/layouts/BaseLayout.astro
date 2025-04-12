@@ -61,7 +61,7 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     <script>
       import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
       // Connect to your WebSocket server
-      const socket = io("http://analytics.thelocalgodd.me", {
+      const socket = io("https://analytics.thelocalgodd.me", {
         transports: ["websocket"],
       });
 
