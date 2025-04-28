@@ -70,10 +70,10 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
     <link rel="canonical" href={canonicalURL} />
-
     <!-- Meta Tags Generated with https://metatags.io -->
 
-    <script defer>
+    <!-- analytics script -->
+    <script defer> 
       fetch("https://analytics.thelocalgodd.me/api", {
         // fetch("http://localhost:3002/api", {
         method: "POST",
@@ -86,7 +86,6 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
       });
     </script>
 
-    <!-- Add Socket.IO client -->
     <script>
       
     </script>
