@@ -13,6 +13,12 @@ const projectItems = [
     tag: "react, tailwindcss, node, express, mongodb",
   },
   {
+    title: "ganya",
+    description: "[WIP]a fullstack expense tracking web application.",
+    link: "https://github.com/thelocalgodd/ganya",
+    tag: "react, tailwindcss, node, express, mongodb",
+  },
+  {
     title: "Believer - Song Promotion Page",
     description: "a song promotion page for Believer by Cl!Q and Yaw Palmer.",
     link: "https://believer-pi.vercel.app",
