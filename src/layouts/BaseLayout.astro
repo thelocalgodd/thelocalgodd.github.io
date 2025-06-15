@@ -3,35 +3,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import Loader from "../components/Loader.astro";
-import { io } from "socket.io-client";
-
-const connectWebSockets = () => {
-        // Connect to your WebSocket server
-        const socket = io("https://analytics.thelocalgodd.me", {
-        transports: ["websocket"],
-        secure: false,
-        reconnection: true,
-        reconnectionAttempts: 5,
-        reconnectionDelay: 1000,
-        reconnectionDelayMax: 5000,
-      });
-
-      // Send visitor data when page loads
-      socket.emit("new-visitor", {
-        screenWidth: window.innerWidth,
-        path: window.location.pathname,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent
-
-      }, () => {
-        console.log("Visitor data sent");
-      });
-
-      // Optional: Listen for other visitors if you want to show real-time stats
-      socket.on("new-visitor", (data: {screenWidth: number, path: string, timestamp: string, userAgent: string}) => {
-        console.log("New visitor:", data);
-      });
-}
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
@@ -73,7 +44,7 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
     <!-- Meta Tags Generated with https://metatags.io -->
 
     <!-- analytics script -->
-    <script defer> 
+    <script defer>
       fetch("https://analytics.thelocalgodd.me/api", {
         // fetch("http://localhost:3002/api", {
         method: "POST",
@@ -84,10 +55,6 @@ const { pageTitle, description, image = "/placeholder.png" } = Astro.props;
           screenWidth: window.innerWidth,
         }),
       });
-    </script>
-
-    <script>
-      
     </script>
 
     <title>{pageTitle}</title>
